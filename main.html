@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supergram</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: #fff;
+      color: #0a3a82;
+    }
+    .header {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      position: relative;
+    }
+    .logoTitle {
+      height: 20px;
+      width: '100%';
+      margin-right: 10px;
+      position: relative;
+    }
+    .logo::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 14px solid white;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 50px;
+    }
+    .hero p {
+      font-size: 25px;
+      margin:0;
+      line-height: 30px;
+    }
+    .waitlist-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .waitlist-section h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+      line-height: 60px;
+    }
+    .waitlist-section h2 {
+      font-size: 30px;
+      margin-bottom: 40px;
+      font-weight: normal;
+      line-height: 50px;
+    }
+    .waitlist-text {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .form {
+      display: flex;
+      gap: 8px;
+    }
+    .form input {
+      padding: 12px 16px;
+      border: none;
+      border-radius: 6px;
+      width: 220px;
+      font-size: 16px;
+      outline: none;
+      background: #c91d2d;
+      color: #fff;
+    }
+    .form button {
+      background: #c91d2d;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 18px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form button:hover {
+      background: #a51523;
+    }
+    footer {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    padding: 30px 20px;
+    font-size: 16px;
+    margin-top: 50px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  .footer-left strong {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .footer-left a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .footer-left a:hover {
+    text-decoration: underline;
+  }
+  .footer-center {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(115, 115, 115);
+    margin-top: 10px;
+  }
+  .footer-right {
+    text-align: right;
+  }
+  .linkedin {
+    margin-bottom: 25px;
+  }
+  .linkedin img {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+  }
+  ::-webkit-input-placeholder { 
+    color:    #fff;
+}
+:-moz-placeholder {
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder {
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { 
+   color:    #fff;
+}
+::-ms-input-placeholder {
+   color:    #fff;
+}
+::placeholder { 
+   color:    #fff;
+}
+  </style>
+</head>
+<body>
+
+  <div class="header">
+        <img src="src/images/logo.png" class="logo" alt="Logo">
+        <img src="src/images/title.png" class="logoTitle" alt="SUPERGRAM">
+  </div>
+
+
+  <section class="hero">
+    <h1>SUPERGRAM</h1>
+    <p>Supergram is almost here - get ready to <br /> create your day.</p>
+  </section>
+
+
+  <section class="waitlist-section">
+    <h1>Launching this <br /> September!</h1>
+    <h2>Be the First to Experience Supergram</h2>
+    <h2 style="margin-bottom: 20px;">Join the waitlist</h2>
+
+    <form class="form">
+      <input type="email" placeholder="Enter your Email" required>
+      <button type="submit">→</button>
+    </form>
+  </section>
+
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <strong>SUPERGRAM</strong><br>
+      Contact us <br>
+      <a href="mailto:koushik@supergram.in">koushik@supergram.in</a>
+    </div>
+
+    <div class="footer-right">
+      <div class="linkedin">
+        <a href="https://www.linkedin.com/company/officialsupergram/?viewAsMember=true">
+        <img src="src/images/linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+      Bangalore,<br>
+      Karnataka India, 560095
+    </div>
+  </div>
+
+    <div class="footer-center">
+      © 2025 Supergram Tech Private Limited All right reserved
+    </div>
+</footer>
+</body>
+</html>
