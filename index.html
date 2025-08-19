@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supergram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="assests/images/logo.png" alt="Supergram Logo" class="logo-image">
+                <h1 class="logoTitle">Supergram</h1>
+            </div>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">SUPERGRAM</h1>
+                <p class="hero-subtitle">Supergram is almost here - get ready to create your day.</p>
+            </div>
+        </section>
+
+        <!-- Waitlist Section -->
+        <section class="waitlist">
+            <div class="container">
+                <h2 class="waitlist-title">Launching this September!</h2>
+                <p class="waitlist-subtitle">Be the First to Experience Supergram</p>
+                
+                <form class="waitlist-form" id="waitlistForm" novalidate>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            required 
+                            aria-describedby="email-error"
+                            class="email-input"
+                        >
+                        <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">Join the waitlist</button>
+                </form>
+
+                <!-- Success/Error Messages -->
+                <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p>Contact: <a href="mailto:koushik@supergram.in">koushik@supergram.in</a></p>
+                    <p>Bangalore, Karnataka India, 560095</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/officialsupergram/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <div class="social-icon linkedin-icon"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Supergram Tech Private Limited All right reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
