@@ -17,6 +17,7 @@
       left: 30px;
       display: flex;
       align-items: center;
+      justify-items: center;
       font-weight: bold;
       font-size: 20px;
     }
@@ -48,7 +49,7 @@
 
 /* hero section */
     .hero {
-      height: 100vh;
+      height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -158,132 +159,7 @@
   .footer-right {
     text-align: right;
   }
-  .linkedin {
-    margin-bottom: 25px;
-    width: 24px;
-    height: 24px;
-    background-color: #c91d2d;
-    padding-top: 10px;
-  }
-  .linkedin img {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-  }
-
-
-
-
-/* about section */
-
-  .about {
-    width: 60%;
-    margin: 0 auto;
-    background: #fff;
-    font-family: Arial, sans-serif;
-    padding-bottom: 200px;
-  }
-
-  .about-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-
-  .about-logo img {
-    width: 250px;
-    height: auto;
-    display: block;
-  }
-
-  .about-text {
-    flex: 1;
-    color: #003399; /* Dark Blue */
-  }
-
-  .about-text h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #003399;
-  }
-
-  .about-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column;
-      text-align: center;
-    }
-    .about-text {
-      text-align: center;
-    }
-  }
-
-/* team section */
-    .team {
-    text-align: center;
-    padding: 0px 20px;
-    padding-bottom: 60px;
-    background: #fff;
-    font-family: Arial, sans-serif;
-  }
-
-  .team h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    color: #003399;
-  }
-
-  .team-container {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
-  }
-
-  .team-member {
-    max-width: 240px;
-    text-align: center;
-  }
-
-  .team-photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #003399;
-    margin: 0 auto 20px;
-  }
-
-  .team-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .team-member h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #003399;
-    margin-bottom: 8px;
-  }
-
-  .team-member p {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 12px;
-    color: #003399;
-  }
-
-    .linkedin-footer {
+  .linkedin-footer {
     margin-bottom: 25px;
   }
   .linkedin-footer img {
@@ -292,15 +168,193 @@
     display: inline-block;
   }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .team-container {
-      flex-direction: column;
-      gap: 40px;
-      align-items: center;
-    }
+
+  /* special-section */
+  .special-section {
+    padding: 20px;
+    padding-bottom: 200px;
+    position: relative;
+    background: #fff;
+    justify-content: center;
+    
   }
 
+  .special-section-div{
+    padding: 60px 80px;
+min-width: 80%;
+  }
+
+  .special-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #003399;
+    margin-bottom: 30px;
+  }
+
+  .special-section .highlight {
+    color: #003399;
+  }
+
+  .special-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .special-content .text {
+    max-width: 50%;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #003399;
+    padding-left: 70px;
+  }
+
+  .special-content .text p {
+    margin-bottom: 18px;
+  }
+
+  .special-content strong {
+    color: #003399;
+  }
+
+  .image-right img {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-left {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 220px;
+    max-width: 35%;
+  }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .special-section {
+    padding: 30px 20px;
+    padding-bottom: 100px;
+      width: 90%;
+      justify-content: center;
+  }
+
+    .special-section-div{
+    padding: 0;
+min-width: 100%;
+  }
+
+
+  .special-section h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+.special-content {
+      justify-content: center;
+
+}
+  .special-content .text {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    padding-left: 0px;
+
+  }
+
+  .image-right img {
+    width: 250px;
+  }
+
+  .image-left {
+    width: 120px;
+    position: static; /* removes overlap on tiny screens */
+    margin-top: 20px;
+  }
+}
+/*  */
+
+
+
+
+  /* header */
+  .navbar {
+    padding: 20px 40px;
+    border-bottom: 2px solid #003399;
+    background: #fff; 
+      position: sticky;
+  top: 0;
+  z-index: 1000; 
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+
+  }
+
+  .nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .brand {
+    font-size: 22px;
+    font-weight: 700;
+    color: #003399;
+  }
+
+  nav a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #003399;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  
+/* header */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;       /* stack logo + nav */
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .nav-left img,
+  .nav-right img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-right nav {
+    display: flex;
+    flex-direction: column;       /* stack links */
+    gap: 12px;
+    text-align: center;
+  }
+
+  .nav-right nav a {
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-right nav a:last-child {
+    border-bottom: none;
+  }
+}
 
 
 /*  */
@@ -329,76 +383,72 @@
 </head>
 <body>
 
-  <div class="header">
+  <!-- <div class="header">
+    <div>
         <img src="src/images/logo.png" class="logo" alt="Logo">
         <img src="src/images/title.png" class="logoTitle" alt="SUPERGRAM">
+      </div>
+      <div>
+        <a href="">About</a>
+        <a href="">Team</a>
+      <img src="src/images/logo.png" class="logo" alt="Logo">
+      </div>
+  </div> -->
+
+  <header class="navbar">
+  <a href="./index.html" class="nav-left" style="text-decoration: none;">
+    <img src="src/images/logo.png" alt="Logo" class="logo">
+    <span class="brand">SUPERGRAM</span>
+    </a>
+
+  <div class="nav-right">
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./team.html">Team</a>
+    </nav>
+    <img src="src/images/logo.png" alt="Logo Right" class="logo">
   </div>
+</header>
 
 
   <section class="hero">
     <h1>SUPERGRAM</h1>
-    <p>Supergram is almost here - get ready to <br /> create your day.</p>
+    <p>Supergram is almost here - get ready to <br /><b>create your day.</b></p>
   </section>
 
-  <section class="about">
-  <div class="about-container">
-    <!-- Left: Logo -->
-    <div class="about-logo">
-      <img src="src/images/logo.png" alt="Supergram Logo">
+  <section id="about" class="special-section">
+        <div class="special-section-div">
+          
+          <div class="special-content">
+            <div class="text">
+      <h2>What makes <span class="highlight">SUPERGRAM</span> special</h2>
+      <p>
+        Earn money from just <strong>1,000 followers</strong> through shops, 
+        rewards, and brand deals.
+      </p>
+      <p>
+        <strong>Lip-sync, duet, and editing tools</strong> make creating effortless and engaging.
+      </p>
+      <p>
+        <strong>Hashtag challenges</strong> give every creator a real shot 
+        at visibility, even without a big follower base.
+      </p>
     </div>
 
-    <!-- Right: Content -->
-    <div class="about-text">
-      <h2>About</h2>
-      <p>
-        <strong>Supergram</strong> is the social media platform for short-form
-videos where audiences make every second count to
-express, engage, and earn— seamlessly.
-      </p>
-      <p>
-Our mission is to capture and present the world's
-creativity, knowledge, and moments that matter—directly
-from the mobile phone.      </p>
-      <p>
-        Supergram enables everyone to be a creator, and
-encourages users to share their passions and personal
-creative expression through their videos.
-      </p>
+    <div class="image-right">
+      <img src="src/images/shopping-girls.png" alt="Shopping girls">
     </div>
+  </div>
+
   </div>
 </section>
 
 
-<section class="team">
-  <h2>Super Team</h2>
-  <div class="team-container">
 
-    <!-- Team Member 1 -->
-    <div class="team-member">
-      <div class="team-photo">
-        <img src="src/images/arjun.jpeg" alt="Arjun Raju V">
-      </div>
-      <h3>Arjun Raju V</h3>
-      <p>Founder & CFO</p>
-      <a href="https://www.linkedin.com/in/arjunraju1" target="_blank" class="linkedin">
-        <img src="src/images/linkedin.png" alt="LinkedIn">
-      </a>
-    </div>
 
-    <!-- Team Member 2 -->
-    <div class="team-member">
-      <div class="team-photo">
-        <img src="src/images/kaushik.jpeg" alt="Koushik H V">
-      </div>
-      <h3>Koushik H V</h3>
-      <p>Co-Founder & CEO</p>
-      <a href="https://www.linkedin.com/in/koushikgoodur" target="_blank" class="linkedin" >
-        <img src="src/images/linkedin.png" alt="LinkedIn">
-      </a>
-    </div>
 
-  </div>
-</section>
+
 
 
 
