@@ -455,10 +455,11 @@ min-width: 100%;
     <h2>Be the First to Experience Supergram</h2>
     <h2 style="margin-bottom: 20px;">Join the waitlist</h2>
 
-    <form class="form">
-      <input type="email" placeholder="Enter your Email" required>
-      <button type="submit">→</button>
+    <form id="waitlist-form" class="form" novalidate>
+      <input id="waitlist-email" type="email" placeholder="Enter your Email" required autocomplete="email" />
+      <button type="submit" aria-label="Join waitlist">→</button>
     </form>
+    <div id="waitlist-status" class="waitlist-text" aria-live="polite"></div>
   </section>
 
 
@@ -485,5 +486,7 @@ min-width: 100%;
       © 2025 Supergram Tech Private Limited All right reserved
     </div>
 </footer>
+<script src="env.js"></script>
+<script type="module" src="waitlist.js"></script>
 </body>
 </html>
