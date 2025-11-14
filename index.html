@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supergram</title>
+    <link rel="icon" type="image/x-icon" href="src/images/logo.png" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background: #fff;
+        color: #0a3a82;
+      }
+      .header {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 50%;
+        position: relative;
+      }
+      .logoTitle {
+        height: 20px;
+        width: "100%";
+        margin-right: 10px;
+        position: relative;
+      }
+      .logo::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 14px solid white;
+      }
+
+      /* hero section */
+      .hero {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 60px;
+        margin-bottom: 50px;
+      }
+      .hero p {
+        font-size: 25px;
+        margin: 0;
+        line-height: 30px;
+      }
+
+      /* waitlist section */
+      .waitlist-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+      .waitlist-section h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        line-height: 60px;
+      }
+      .waitlist-section h2 {
+        font-size: 30px;
+        margin-bottom: 40px;
+        font-weight: normal;
+        line-height: 50px;
+      }
+      .waitlist-text {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .form {
+        display: flex;
+        gap: 8px;
+      }
+      .form input {
+        padding: 12px 16px;
+        border: none;
+        border-radius: 6px;
+        width: 220px;
+        font-size: 16px;
+        outline: none;
+        background: #c91d2d;
+        color: #fff;
+      }
+      .form button {
+        background: #c91d2d;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 18px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .form button:hover {
+        background: #a51523;
+      }
+
+      /* footer section */
+      /* footer {
+        background: rgb(0, 0, 0);
+        color: #fff;
+        padding: 30px 20px;
+        font-size: 16px;
+      }
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        text-align: left;
+      }
+      .footer-left strong {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+      .footer-left a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .footer-left a:hover {
+        text-decoration: underline;
+      }
+      .footer-center {
+        flex: 1;
+        text-align: center;
+        font-size: 16px;
+        color: rgb(115, 115, 115);
+        margin-top: 10px;
+      }
+      .footer-right {
+        text-align: right;
+      }
+      .linkedin-footer {
+        margin-bottom: 25px;
+      }
+      .linkedin-footer img {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+      }
+ */
+
+      .footer {
+        background: #0c0d12;
+        color: #ffffff;
+        padding: 60px 10%;
+        font-family: "Inter", sans-serif;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 40px;
+      }
+
+      .footer-left {
+        width: 80%;
+      }
+
+      .footer-left h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 32px;
+      }
+
+      .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 0;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .contact-text {
+        color: #b0b0b0;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .contact-text a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .footer-right {
+        text-align: right;
+        padding-top: 9%;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 16px;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+      }
+
+      .social-icons img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .social-icons img:hover {
+        opacity: 0.7;
+      }
+
+      .address {
+        color: #d0d0d0;
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      /* bottom section */
+      .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #a0a0a0;
+        font-size: 15px;
+      }
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-left {
+          width: 100%;
+        }
+
+        .footer-right {
+          width: 100%;
+          text-align: center;
+          padding-top: 0;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        .footer {
+          padding: 40px 6%;
+        }
+
+        .footer-left {
+          width: 100%;
+        }
+
+        .footer-right {
+          width: 100%;
+          padding-top: 0;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .footer-links a {
+          font-size: 15px;
+        }
+
+        .footer-left h2 {
+          font-size: 24px;
+        }
+
+        .address {
+          font-size: 14px;
+        }
+
+        .footer-bottom {
+          font-size: 13px;
+        }
+      }
+
+      /* special-section */
+      .special-section {
+        padding: 20px;
+        padding-bottom: 100px;
+        padding-top: 30px;
+        position: relative;
+        background: #fff;
+        justify-content: center;
+      }
+
+      .special-section-div {
+      }
+
+      .special-section h2 {
+        font-size: 60px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 30px;
+        line-height: normal;
+        padding-left: 50px;
+      }
+
+      .special-section .highlight {
+        color: #003399;
+      }
+
+      .special-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .special-content .text {
+        max-width: 55%;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #003399;
+      }
+
+      .special-content .text p {
+        margin-bottom: 18px;
+        font-size: 28px;
+        color: #000000;
+        padding-left: 50px;
+      }
+
+      .special-content .text li {
+        font-size: 28px;
+        color: #4f4f4f;
+        padding-bottom: 30px;
+      }
+
+      .second-section-text {
+        margin-bottom: 18px;
+        font-size: 28px !important;
+        color: #000000;
+        padding-left: 0px !important;
+      }
+
+      .second-section-h2 {
+        font-size: 51px !important;
+        font-weight: 600 !important;
+        color: #bf0a30 !important;
+        margin-bottom: 30px;
+        line-height: normal;
+        padding-left: 0px !important;
+      }
+
+      .special-content strong {
+        color: #003399;
+      }
+      .image-right {
+        max-width: 45%;
+      }
+
+      .image-right img {
+        width: 100%;
+        height: auto;
+      }
+
+      .section3img {
+        width: 100%;
+        height: 510px !important;
+      }
+
+      .image-left {
+        position: absolute;
+        bottom: 20px;
+        left: 0px;
+        width: 220px;
+        max-width: 35%;
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        /* Special sections */
+        .special-section {
+          padding: 40px 20px;
+        }
+
+        .special-content {
+          flex-direction: column !important;
+          text-align: center;
+        }
+
+        .special-content .text,
+        .image-right {
+          max-width: 100% !important;
+        }
+
+        .special-section h2,
+        .second-section-h2 {
+          font-size: 32px !important;
+          padding-left: 0 !important;
+          text-align: center;
+        }
+
+        .special-content .text p,
+        .second-section-text {
+          padding-left: 0 !important;
+          font-size: 18px !important;
+          text-align: center;
+        }
+
+        .special-content .text li {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        /* Images */
+        .image-right img {
+          width: 100%;
+          max-width: 320px;
+          margin: 20px auto;
+          display: block;
+          height: auto !important;
+        }
+
+        .image-left {
+          position: static;
+          width: 150px;
+          margin: 20px auto 0;
+        }
+      }
+      /*  */
+
+      /* header */
+      .navbar {
+        padding: 20px 40px;
+        /* border-bottom: 2px solid #003399;*/
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+      }
+
+      .nav-left,
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .brand {
+        font-size: 22px;
+        font-weight: 700;
+        color: #003399;
+      }
+
+      nav a {
+        font-size: 18px;
+        font-weight: 600;
+        color: #003399;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* header */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column; /* stack logo + nav */
+          align-items: center;
+          padding: 15px;
+          gap: 10px;
+        }
+
+        .nav-left img,
+        .nav-right img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .nav-right nav {
+          display: flex;
+          flex-direction: column; /* stack links */
+          gap: 12px;
+          text-align: center;
+        }
+
+        .nav-right nav a {
+          padding: 8px 0;
+          width: 100%;
+          border-bottom: 1px solid #ddd;
+        }
+
+        .no-bottom-line nav a {
+          border-bottom: 0px !important;
+        }
+
+        .nav-right nav a:last-child {
+          border-bottom: none;
+        }
+      }
+
+      /*  */
+      ::-webkit-input-placeholder {
+        color: #fff;
+      }
+      :-moz-placeholder {
+        color: #fff;
+        opacity: 1;
+      }
+      ::-moz-placeholder {
+        color: #fff;
+        opacity: 1;
+      }
+      :-ms-input-placeholder {
+        color: #fff;
+      }
+      ::-ms-input-placeholder {
+        color: #fff;
+      }
+      ::placeholder {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="header">
+    <div>
+        <img src="src/images/logo.png" class="logo" alt="Logo">
+        <img src="src/images/title.png" class="logoTitle" alt="SUPERGRAM">
+      </div>
+      <div>
+        <a href="">About</a>
+        <a href="">Team</a>
+      <img src="src/images/logo.png" class="logo" alt="Logo">
+      </div>
+  </div> -->
+
+    <header class="navbar">
+      <a href="./index.html" class="nav-left" style="text-decoration: none">
+        <img src="src/images/logo.png" alt="Logo" class="logo" />
+        <span class="brand">SUPERGRAM</span>
+      </a>
+
+      <div class="nav-right">
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#feature">Feature</a>
+        </nav>
+        <img src="src/images/logo.png" alt="Logo Right" class="logo" />
+      </div>
+    </header>
+
+    <section id="home" class="special-section">
+      <div class="special-section-div">
+        <div class="special-content">
+          <div class="text">
+            <h2>Make Every<br />Second Count.</h2>
+            <p>
+              Supergram is the new home for short-form videos where you can
+              express, engage seamlessly.
+            </p>
+          </div>
+
+          <div class="image-right">
+            <img src="src/images/shopping-girls.png" alt="Shopping girls" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="special-section">
+      <div class="special-section-div">
+        <div class="special-content">
+          <div class="image-right">
+            <img src="src/images/mobile.png" alt="Shopping girls" />
+          </div>
+          <div class="text">
+            <h2 class="second-section-h2">Create your day</h2>
+            <p class="second-section-text">
+              Our mission is to capture and present the world’s creativity,
+              knowledge, and moments that matter-directly from your mobile
+              phone.<br /><br />
+              At Supergram, everyone can become a creator. Whether you’re
+              telling stories, showcasing talent, or sharing what inspires
+              you-Supergram is where creativity comes alive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="feature"
+      class="special-section"
+      style="padding-bottom: 0px !important"
+    >
+      <div class="special-section-div">
+        <div class="special-content">
+          <h2 class="second-section-h2">Explore Our unique features</h2>
+          <p
+            class="second-section-text"
+            style="
+              margin: 0px !important;
+              width: 50%;
+              text-align: center;
+              line-height: 40px;
+            "
+          >
+            Create, connect, and build your presence through short-form videos.
+          </p>
+          <div class="text">
+            <ul>
+              <li>
+                <b>AI-powered</b> feed that surfaces content tailored to your
+                passions.
+              </li>
+              <li>
+                Get creative with <b>lip-sync, duet, and react</b> — the most
+                fun ways to express yourself on Supergram.
+              </li>
+              <li>
+                Join trending <b>#HashtagChallenges</b> and showcase your
+                creativity to the world.
+              </li>
+            </ul>
+          </div>
+
+          <div class="image-right">
+            <img
+              src="src/images/mobile-girl.png"
+              alt="Shopping girls"
+              class="section3img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="waitlist-section">
+      <h1>
+        Launching this <br />
+        September!
+      </h1>
+      <h2>Be the First to Experience Supergram</h2>
+      <h2 style="margin-bottom: 20px">Join the waitlist</h2>
+
+      <form class="form">
+        <input type="email" placeholder="Enter your Email" required />
+        <button type="submit">→</button>
+      </form>
+    </section> -->
+
+    <!-- <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <strong>SUPERGRAM</strong><br />
+          Contact us <br />
+
+          <a href="mailto:koushik@supergram.in">koushik@supergram.in</a>
+        </div>
+
+        <div class="footer-right">
+          <div class="linkedin-footer">
+            <a
+              href="https://www.linkedin.com/company/officialsupergram/?viewAsMember=true"
+            >
+              <img src="src/images/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+          Bangalore,<br />
+          Karnataka India, 560095
+        </div>
+      </div>
+
+      <div class="footer-center">
+        © 2025 Supergram Tech Private Limited All right reserved
+      </div>
+    </footer> -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <h2>Supergram</h2>
+          <nav class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#feature">Features</a>
+            <a href="src/pdf/privacy.pdf" target="_blank">Privacy Policy</a>
+            <a href="src/pdf/terms.pdf" target="_blank">Terms of Use</a>
+            <a href="src/pdf/community.pdf" target="_blank"
+              >Community Guidelines</a
+            >
+          </nav>
+          <p class="contact-text">
+            Contact us<br />
+            <a href="mailto:koushik@supergram.in">Koushik@supergram.in</a>
+          </p>
+        </div>
+
+        <div class="footer-right">
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/officialsupergram?igsh=MXdqM3pqemo1cWo2NA%3D%3D&utm_source=qr"
+              aria-label="Instagram"
+              ><img src="src/images/insta.png" alt="Instagram"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/officialsupergram"
+              aria-label="LinkedIn"
+              ><img src="src/images/linkedin.png" alt="LinkedIn"
+            /></a>
+          </div>
+          <p class="address">
+            Bengaluru,<br />
+            Karnataka India,<br />
+            560095
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        ©
+        <script>
+          document.write(/\d{4}/.exec(Date())[0]);
+        </script>
+        Supergram Tech Private Limited — All rights reserved
+      </div>
+    </footer>
+  </body>
+</html>
