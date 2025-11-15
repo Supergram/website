@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supergram - Account Deletion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .contact {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f7f7f7;
+            border-left: 4px solid #007aff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Supergram – Account & Data Deletion</h1>
+
+    <p>
+        You can delete your Supergram account and all associated personal data directly from within the app. 
+        We provide a simple and transparent process that allows you to manage and erase your data at any time.
+    </p>
+
+    <h2>How to Delete Your Account (Inside the App)</h2>
+    <p>Follow the steps below:</p>
+
+    <ol>
+        <li>Open the <strong>Supergram</strong> app</li>
+        <li>Go to <strong>Profile → Settings</strong></li>
+        <li>Select <strong>“Request Account Deletion”</strong> or <strong>“Delete My Data”</strong></li>
+        <li>Confirm your deletion request</li>
+    </ol>
+
+    <p>
+        Once confirmed, your account and all associated data will be permanently deleted within 
+        <strong>7 days</strong>, as per our data retention policy.
+    </p>
+
+    <h2>Important Notes</h2>
+    <ul>
+        <li>You will lose access to all your account data after deletion.</li>
+        <li>Some system logs may be retained for security, anti-abuse, and legal reasons.</li>
+        <li>You can reinstall the app and create a new account anytime.</li>
+    </ul>
+
+    <h2>Need Help?</h2>
+    <p>If you face any issues deleting your account, you can contact us.</p>
+
+    <div class="contact">
+        <strong>Email:</strong> arjun@supergram.in<br>
+        <strong>Response Time:</strong> Within 48–72 hours
+    </div>
+
+</body>
+</html>
