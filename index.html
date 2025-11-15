@@ -4,9 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supergram</title>
+
+    <!-- OLD FAVICON (kept as you said) -->
     <link rel="icon" type="image/x-icon" href="src/images/logo.png" />
 
+    <!-- NEW FAVICONS (root folder) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- GOOGLE LOGO STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Supergram",
+      "url": "https://supergram.in",
+      "logo": "https://supergram.in/favicon-192x192.png"
+    }
+    </script>
+
     <style>
+      /* YOUR ENTIRE CSS BELOW (unchanged) */
+
       body {
         margin: 0;
         font-family: "Georgia", serif;
@@ -120,53 +141,6 @@
       }
 
       /* footer section */
-      /* footer {
-        background: rgb(0, 0, 0);
-        color: #fff;
-        padding: 30px 20px;
-        font-size: 16px;
-      }
-      .footer-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        text-align: left;
-      }
-      .footer-left strong {
-        display: block;
-        margin-bottom: 15px;
-        font-size: 16px;
-      }
-      .footer-left a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        line-height: 22px;
-      }
-      .footer-left a:hover {
-        text-decoration: underline;
-      }
-      .footer-center {
-        flex: 1;
-        text-align: center;
-        font-size: 16px;
-        color: rgb(115, 115, 115);
-        margin-top: 10px;
-      }
-      .footer-right {
-        text-align: right;
-      }
-      .linkedin-footer {
-        margin-bottom: 25px;
-      }
-      .linkedin-footer img {
-        width: 24px;
-        height: 24px;
-        display: inline-block;
-      }
- */
-
       .footer {
         background: #0c0d12;
         color: #ffffff;
@@ -249,7 +223,6 @@
         line-height: 28px;
       }
 
-      /* bottom section */
       .footer-bottom {
         text-align: center;
         margin-top: 40px;
@@ -328,9 +301,6 @@
         justify-content: center;
       }
 
-      .special-section-div {
-      }
-
       .special-section h2 {
         font-size: 60px;
         font-weight: 700;
@@ -390,6 +360,7 @@
       .special-content strong {
         color: #003399;
       }
+
       .image-right {
         max-width: 45%;
       }
@@ -414,7 +385,6 @@
 
       /* Mobile */
       @media (max-width: 768px) {
-        /* Special sections */
         .special-section {
           padding: 40px 20px;
         }
@@ -448,7 +418,6 @@
           line-height: 28px;
         }
 
-        /* Images */
         .image-right img {
           width: 100%;
           max-width: 320px;
@@ -463,12 +432,10 @@
           margin: 20px auto 0;
         }
       }
-      /*  */
 
       /* header */
       .navbar {
         padding: 20px 40px;
-        /* border-bottom: 2px solid #003399;*/
         background: #fff;
         position: sticky;
         top: 0;
@@ -509,10 +476,9 @@
         text-decoration: underline;
       }
 
-      /* header */
       @media (max-width: 768px) {
         .header {
-          flex-direction: column; /* stack logo + nav */
+          flex-direction: column;
           align-items: center;
           padding: 15px;
           gap: 10px;
@@ -526,7 +492,7 @@
 
         .nav-right nav {
           display: flex;
-          flex-direction: column; /* stack links */
+          flex-direction: column;
           gap: 12px;
           text-align: center;
         }
@@ -546,7 +512,6 @@
         }
       }
 
-      /*  */
       ::-webkit-input-placeholder {
         color: #fff;
       }
@@ -569,18 +534,8 @@
       }
     </style>
   </head>
+
   <body>
-    <!-- <div class="header">
-    <div>
-        <img src="src/images/logo.png" class="logo" alt="Logo">
-        <img src="src/images/title.png" class="logoTitle" alt="SUPERGRAM">
-      </div>
-      <div>
-        <a href="">About</a>
-        <a href="">Team</a>
-      <img src="src/images/logo.png" class="logo" alt="Logo">
-      </div>
-  </div> -->
 
     <header class="navbar">
       <a href="./index.html" class="nav-left" style="text-decoration: none">
@@ -637,93 +592,27 @@
       </div>
     </section>
 
-    <section
-      id="feature"
-      class="special-section"
-      style="padding-bottom: 0px !important"
-    >
+    <section id="feature" class="special-section" style="padding-bottom: 0px !important">
       <div class="special-section-div">
         <div class="special-content">
           <h2 class="second-section-h2">Explore Our unique features</h2>
-          <p
-            class="second-section-text"
-            style="
-              margin: 0px !important;
-              width: 50%;
-              text-align: center;
-              line-height: 40px;
-            "
-          >
+          <p class="second-section-text" style="margin: 0px !important; width: 50%; text-align: center; line-height: 40px;">
             Create, connect, and build your presence through short-form videos.
           </p>
           <div class="text">
             <ul>
-              <li>
-                <b>AI-powered</b> feed that surfaces content tailored to your
-                passions.
-              </li>
-              <li>
-                Get creative with <b>lip-sync, duet, and react</b> — the most
-                fun ways to express yourself on Supergram.
-              </li>
-              <li>
-                Join trending <b>#HashtagChallenges</b> and showcase your
-                creativity to the world.
-              </li>
+              <li><b>AI-powered</b> feed that surfaces content tailored to your passions.</li>
+              <li>Get creative with <b>lip-sync, duet, and react</b> — the most fun ways to express yourself on Supergram.</li>
+              <li>Join trending <b>#HashtagChallenges</b> and showcase your creativity to the world.</li>
             </ul>
           </div>
 
           <div class="image-right">
-            <img
-              src="src/images/mobile-girl.png"
-              alt="Shopping girls"
-              class="section3img"
-            />
+            <img src="src/images/mobile-girl.png" alt="Shopping girls" class="section3img" />
           </div>
         </div>
       </div>
     </section>
-
-    <!-- <section class="waitlist-section">
-      <h1>
-        Launching this <br />
-        September!
-      </h1>
-      <h2>Be the First to Experience Supergram</h2>
-      <h2 style="margin-bottom: 20px">Join the waitlist</h2>
-
-      <form class="form">
-        <input type="email" placeholder="Enter your Email" required />
-        <button type="submit">→</button>
-      </form>
-    </section> -->
-
-    <!-- <footer>
-      <div class="footer-container">
-        <div class="footer-left">
-          <strong>SUPERGRAM</strong><br />
-          Contact us <br />
-
-          <a href="mailto:koushik@supergram.in">koushik@supergram.in</a>
-        </div>
-
-        <div class="footer-right">
-          <div class="linkedin-footer">
-            <a
-              href="https://www.linkedin.com/company/officialsupergram/?viewAsMember=true"
-            >
-              <img src="src/images/linkedin.png" alt="LinkedIn" />
-            </a>
-          </div>
-          Bangalore,<br />
-          Karnataka India, 560095
-        </div>
-      </div>
-
-      <div class="footer-center">
-        © 2025 Supergram Tech Private Limited All right reserved
-      </div>
-    </footer> -->
 
     <footer class="footer">
       <div class="footer-container">
@@ -735,9 +624,7 @@
             <a href="#feature">Features</a>
             <a href="src/pdf/privacy.pdf" target="_blank">Privacy Policy</a>
             <a href="src/pdf/terms.pdf" target="_blank">Terms of Use</a>
-            <a href="src/pdf/community.pdf" target="_blank"
-              >Community Guidelines</a
-            >
+            <a href="src/pdf/community.pdf" target="_blank">Community Guidelines</a>
           </nav>
           <p class="contact-text">
             Contact us<br />
@@ -747,16 +634,12 @@
 
         <div class="footer-right">
           <div class="social-icons">
-            <a
-              href="https://www.instagram.com/officialsupergram?igsh=MXdqM3pqemo1cWo2NA%3D%3D&utm_source=qr"
-              aria-label="Instagram"
-              ><img src="src/images/insta.png" alt="Instagram"
-            /></a>
-            <a
-              href="https://www.linkedin.com/company/officialsupergram"
-              aria-label="LinkedIn"
-              ><img src="src/images/linkedin.png" alt="LinkedIn"
-            /></a>
+            <a href="https://www.instagram.com/officialsupergram" aria-label="Instagram">
+              <img src="src/images/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com/company/officialsupergram" aria-label="LinkedIn">
+              <img src="src/images/linkedin.png" alt="LinkedIn" />
+            </a>
           </div>
           <p class="address">
             Bengaluru,<br />
@@ -767,12 +650,10 @@
       </div>
 
       <div class="footer-bottom">
-        ©
-        <script>
-          document.write(/\d{4}/.exec(Date())[0]);
-        </script>
+        © <script>document.write(/\d{4}/.exec(Date())[0]);</script>
         Supergram Tech Private Limited — All rights reserved
       </div>
     </footer>
+
   </body>
 </html>
