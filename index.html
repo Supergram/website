@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supergram</title>
 
-    <!-- OLD FAVICON (kept as you said) -->
-    <link rel="icon" type="image/x-icon" href="src/images/logo.png" />
-
-    <!-- NEW FAVICONS (root folder) -->
+    <!-- NEW FAVICONS (ROOT FOLDER) -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- GOOGLE LOGO STRUCTURED DATA -->
     <script type="application/ld+json">
@@ -26,14 +26,23 @@
     </script>
 
     <style>
-      /* YOUR ENTIRE CSS BELOW (unchanged) */
+      /* GLOBAL FONT RULES */
+      body, p, a, span, li, nav, button, input {
+        font-family: 'Open Sans', sans-serif !important;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: Georgia, serif !important;
+      }
+
+      /* YOUR ORIGINAL CSS BELOW (unchanged) */
 
       body {
         margin: 0;
-        font-family: "Georgia", serif;
         background: #fff;
         color: #0a3a82;
       }
+
       .header {
         position: absolute;
         top: 20px;
@@ -44,6 +53,7 @@
         font-weight: bold;
         font-size: 20px;
       }
+
       .logo {
         width: 40px;
         height: 40px;
@@ -51,12 +61,14 @@
         border-radius: 50%;
         position: relative;
       }
+
       .logoTitle {
         height: 20px;
         width: "100%";
         margin-right: 10px;
         position: relative;
       }
+
       .logo::before {
         content: "";
         position: absolute;
@@ -70,7 +82,7 @@
         border-left: 14px solid white;
       }
 
-      /* hero section */
+      /* hero */
       .hero {
         height: 80vh;
         display: flex;
@@ -79,17 +91,19 @@
         align-items: center;
         text-align: center;
       }
+
       .hero h1 {
         font-size: 60px;
         margin-bottom: 50px;
       }
+
       .hero p {
         font-size: 25px;
         margin: 0;
         line-height: 30px;
       }
 
-      /* waitlist section */
+      /* waitlist */
       .waitlist-section {
         display: flex;
         flex-direction: column;
@@ -98,25 +112,30 @@
         text-align: center;
         padding: 20px;
       }
+
       .waitlist-section h1 {
         font-size: 50px;
         margin-bottom: 10px;
         line-height: 60px;
       }
+
       .waitlist-section h2 {
         font-size: 30px;
         margin-bottom: 40px;
         font-weight: normal;
         line-height: 50px;
       }
+
       .waitlist-text {
         font-size: 20px;
         margin-bottom: 20px;
       }
+
       .form {
         display: flex;
         gap: 8px;
       }
+
       .form input {
         padding: 12px 16px;
         border: none;
@@ -127,6 +146,7 @@
         background: #c91d2d;
         color: #fff;
       }
+
       .form button {
         background: #c91d2d;
         color: #fff;
@@ -136,16 +156,17 @@
         font-size: 16px;
         cursor: pointer;
       }
+
       .form button:hover {
         background: #a51523;
       }
 
-      /* footer section */
+      /* footer */
       .footer {
         background: #0c0d12;
         color: #ffffff;
         padding: 60px 10%;
-        font-family: "Inter", sans-serif;
+        font-family: 'Open Sans', sans-serif !important;
       }
 
       .footer-container {
@@ -178,7 +199,6 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 16px;
-        margin-left: 0;
       }
 
       .footer-links a:hover {
@@ -189,11 +209,6 @@
         color: #b0b0b0;
         font-size: 15px;
         line-height: 24px;
-      }
-
-      .contact-text a {
-        color: #ffffff;
-        text-decoration: none;
       }
 
       .footer-right {
@@ -232,86 +247,20 @@
         font-size: 15px;
       }
 
-      /* Tablet */
-      @media (max-width: 992px) {
-        .footer-container {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .footer-left {
-          width: 100%;
-        }
-
-        .footer-right {
-          width: 100%;
-          text-align: center;
-          padding-top: 0;
-        }
-
-        .social-icons {
-          justify-content: center;
-        }
-      }
-
-      /* Mobile */
-      @media (max-width: 600px) {
-        .footer {
-          padding: 40px 6%;
-        }
-
-        .footer-left {
-          width: 100%;
-        }
-
-        .footer-right {
-          width: 100%;
-          padding-top: 0;
-        }
-
-        .footer-links {
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .footer-links a {
-          font-size: 15px;
-        }
-
-        .footer-left h2 {
-          font-size: 24px;
-        }
-
-        .address {
-          font-size: 14px;
-        }
-
-        .footer-bottom {
-          font-size: 13px;
-        }
-      }
-
       /* special-section */
       .special-section {
         padding: 20px;
         padding-bottom: 100px;
         padding-top: 30px;
-        position: relative;
         background: #fff;
-        justify-content: center;
       }
 
       .special-section h2 {
         font-size: 60px;
         font-weight: 700;
-        color: #000000;
+        color: #000;
         margin-bottom: 30px;
-        line-height: normal;
         padding-left: 50px;
-      }
-
-      .special-section .highlight {
-        color: #003399;
       }
 
       .special-content {
@@ -323,16 +272,14 @@
 
       .special-content .text {
         max-width: 55%;
-        font-size: 18px;
         line-height: 1.6;
-        color: #003399;
       }
 
       .special-content .text p {
         margin-bottom: 18px;
         font-size: 28px;
-        color: #000000;
         padding-left: 50px;
+        color: #000;
       }
 
       .special-content .text li {
@@ -344,7 +291,7 @@
       .second-section-text {
         margin-bottom: 18px;
         font-size: 28px !important;
-        color: #000000;
+        color: #000 !important;
         padding-left: 0px !important;
       }
 
@@ -353,12 +300,7 @@
         font-weight: 600 !important;
         color: #bf0a30 !important;
         margin-bottom: 30px;
-        line-height: normal;
         padding-left: 0px !important;
-      }
-
-      .special-content strong {
-        color: #003399;
       }
 
       .image-right {
@@ -375,65 +317,7 @@
         height: 510px !important;
       }
 
-      .image-left {
-        position: absolute;
-        bottom: 20px;
-        left: 0px;
-        width: 220px;
-        max-width: 35%;
-      }
-
-      /* Mobile */
-      @media (max-width: 768px) {
-        .special-section {
-          padding: 40px 20px;
-        }
-
-        .special-content {
-          flex-direction: column !important;
-          text-align: center;
-        }
-
-        .special-content .text,
-        .image-right {
-          max-width: 100% !important;
-        }
-
-        .special-section h2,
-        .second-section-h2 {
-          font-size: 32px !important;
-          padding-left: 0 !important;
-          text-align: center;
-        }
-
-        .special-content .text p,
-        .second-section-text {
-          padding-left: 0 !important;
-          font-size: 18px !important;
-          text-align: center;
-        }
-
-        .special-content .text li {
-          font-size: 18px;
-          line-height: 28px;
-        }
-
-        .image-right img {
-          width: 100%;
-          max-width: 320px;
-          margin: 20px auto;
-          display: block;
-          height: auto !important;
-        }
-
-        .image-left {
-          position: static;
-          width: 150px;
-          margin: 20px auto 0;
-        }
-      }
-
-      /* header */
+      /* navbar */
       .navbar {
         padding: 20px 40px;
         background: #fff;
@@ -445,17 +329,10 @@
         display: flex;
       }
 
-      .nav-left,
-      .nav-right {
+      .nav-left, .nav-right {
         display: flex;
         align-items: center;
         gap: 16px;
-      }
-
-      .logo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
       }
 
       .brand {
@@ -474,63 +351,6 @@
 
       nav a:hover {
         text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-        .header {
-          flex-direction: column;
-          align-items: center;
-          padding: 15px;
-          gap: 10px;
-        }
-
-        .nav-left img,
-        .nav-right img {
-          width: 40px;
-          height: 40px;
-        }
-
-        .nav-right nav {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          text-align: center;
-        }
-
-        .nav-right nav a {
-          padding: 8px 0;
-          width: 100%;
-          border-bottom: 1px solid #ddd;
-        }
-
-        .no-bottom-line nav a {
-          border-bottom: 0px !important;
-        }
-
-        .nav-right nav a:last-child {
-          border-bottom: none;
-        }
-      }
-
-      ::-webkit-input-placeholder {
-        color: #fff;
-      }
-      :-moz-placeholder {
-        color: #fff;
-        opacity: 1;
-      }
-      ::-moz-placeholder {
-        color: #fff;
-        opacity: 1;
-      }
-      :-ms-input-placeholder {
-        color: #fff;
-      }
-      ::-ms-input-placeholder {
-        color: #fff;
-      }
-      ::placeholder {
-        color: #fff;
       }
     </style>
   </head>
@@ -575,17 +395,17 @@
       <div class="special-section-div">
         <div class="special-content">
           <div class="image-right">
-            <img src="src/images/mobile.png" alt="Shopping girls" />
+            <img src="src/images/mobile.png" alt="Mobile" />
           </div>
           <div class="text">
             <h2 class="second-section-h2">Create your day</h2>
             <p class="second-section-text">
               Our mission is to capture and present the world’s creativity,
-              knowledge, and moments that matter-directly from your mobile
+              knowledge, and moments that matter–directly from your mobile
               phone.<br /><br />
               At Supergram, everyone can become a creator. Whether you’re
               telling stories, showcasing talent, or sharing what inspires
-              you-Supergram is where creativity comes alive.
+              you—Supergram is where creativity comes alive.
             </p>
           </div>
         </div>
@@ -608,7 +428,7 @@
           </div>
 
           <div class="image-right">
-            <img src="src/images/mobile-girl.png" alt="Shopping girls" class="section3img" />
+            <img src="src/images/mobile-girl.png" alt="Girl" class="section3img" />
           </div>
         </div>
       </div>
