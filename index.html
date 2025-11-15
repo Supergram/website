@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supergram</title>
 
-    <!-- NEW FAVICONS (root folder) -->
+    <!-- OPEN SANS FONT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+
+    <!-- FAVICONS -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
 
     <!-- GOOGLE LOGO STRUCTURED DATA -->
     <script type="application/ld+json">
@@ -20,131 +21,129 @@
       "@type": "Organization",
       "name": "Supergram",
       "url": "https://supergram.in",
-      "logo": "https://supergram.in/favicon-192x192.png"
+      "logo": "https://supergram.in/favicon-192x192.png",
+      "sameAs": [
+        "https://www.instagram.com/officialsupergram",
+        "https://www.linkedin.com/company/officialsupergram"
+      ]
     }
     </script>
 
     <style>
-      /* YOUR ENTIRE CSS BELOW (unchanged) */
-
+      /* GLOBAL */
       body {
         margin: 0;
-        font-family: "Open Sans", sans-serif;
+        font-family: 'Open Sans', sans-serif;
         background: #fff;
         color: #0a3a82;
+        line-height: 1.6;
       }
-      .header {
-        position: absolute;
-        top: 20px;
-        left: 30px;
+
+      /* HEADER */
+      .navbar {
+        padding: 20px 40px;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+      }
+
+      .nav-left, .nav-right {
         display: flex;
         align-items: center;
-        justify-items: center;
-        font-weight: bold;
-        font-size: 20px;
+        gap: 16px;
       }
+
       .logo {
         width: 40px;
         height: 40px;
-        margin-right: 10px;
         border-radius: 50%;
-        position: relative;
-      }
-      .logoTitle {
-        height: 20px;
-        width: "100%";
-        margin-right: 10px;
-        position: relative;
-      }
-      .logo::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-40%, -50%);
-        width: 0;
-        height: 0;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-left: 14px solid white;
       }
 
-      /* hero section */
-      .hero {
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+      .brand {
+        font-size: 22px;
+        font-weight: 700;
+        color: #003399;
       }
-      .hero h1 {
+
+      nav a {
+        font-size: 18px;
+        font-weight: 600;
+        color: #003399;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* SPECIAL SECTION (HERO / ABOUT / FEATURES) */
+      .special-section {
+        padding: 60px 10px 100px 10px;
+        background: #fff;
+        justify-content: center;
+      }
+
+      .special-section h2 {
         font-size: 60px;
-        margin-bottom: 50px;
-      }
-      .hero p {
-        font-size: 25px;
-        margin: 0;
-        line-height: 30px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 30px;
       }
 
-      /* waitlist section */
-      .waitlist-section {
+      .special-content {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        text-align: center;
-        padding: 20px;
-      }
-      .waitlist-section h1 {
-        font-size: 50px;
-        margin-bottom: 10px;
-        line-height: 60px;
-      }
-      .waitlist-section h2 {
-        font-size: 30px;
-        margin-bottom: 40px;
-        font-weight: normal;
-        line-height: 50px;
-      }
-      .waitlist-text {
-        font-size: 20px;
-        margin-bottom: 20px;
-      }
-      .form {
-        display: flex;
-        gap: 8px;
-      }
-      .form input {
-        padding: 12px 16px;
-        border: none;
-        border-radius: 6px;
-        width: 220px;
-        font-size: 16px;
-        outline: none;
-        background: #c91d2d;
-        color: #fff;
-      }
-      .form button {
-        background: #c91d2d;
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-        padding: 12px 18px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-      .form button:hover {
-        background: #a51523;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
       }
 
-      /* footer section */
+      .special-content .text {
+        max-width: 55%;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #003399;
+      }
+
+      .special-content .text p {
+        margin-bottom: 18px;
+        font-size: 28px;
+        color: #000;
+      }
+
+      .image-right {
+        max-width: 45%;
+      }
+
+      .image-right img {
+        width: 100%;
+        height: auto;
+      }
+
+      .second-section-h2 {
+        font-size: 51px;
+        font-weight: 600;
+        color: #bf0a30;
+        margin-bottom: 30px;
+      }
+
+      .second-section-text {
+        font-size: 28px;
+        color: #000;
+        margin-bottom: 18px;
+      }
+
+      /* FOOTER */
       .footer {
         background: #0c0d12;
         color: #ffffff;
         padding: 60px 10%;
-        font-family: "Open Sans", sans-serif;
+        font-family: 'Open Sans', sans-serif;
       }
 
       .footer-container {
@@ -153,10 +152,6 @@
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 40px;
-      }
-
-      .footer-left {
-        width: 80%;
       }
 
       .footer-left h2 {
@@ -177,7 +172,6 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 16px;
-        margin-left: 0;
       }
 
       .footer-links a:hover {
@@ -231,384 +225,91 @@
         font-size: 15px;
       }
 
-      /* Tablet */
+      /* RESPONSIVE */
       @media (max-width: 992px) {
-        .footer-container {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .footer-left {
-          width: 100%;
-        }
-
-        .footer-right {
-          width: 100%;
-          text-align: center;
-          padding-top: 0;
-        }
-
-        .social-icons {
-          justify-content: center;
-        }
+        .footer-container { flex-direction: column; text-align: center; }
+        .footer-left, .footer-right { width: 100%; text-align: center; padding-top: 0; }
+        .social-icons { justify-content: center; }
       }
 
-      /* Mobile */
+      @media (max-width: 768px) {
+        .special-content { flex-direction: column !important; text-align: center; }
+        .special-content .text, .image-right { max-width: 100% !important; }
+        .special-section h2, .second-section-h2 { font-size: 32px !important; text-align: center; }
+        .special-content .text p, .second-section-text { font-size: 18px !important; text-align: center; }
+        .image-right img { width: 100%; max-width: 320px; margin: 20px auto; display: block; }
+      }
+
       @media (max-width: 600px) {
-        .footer {
-          padding: 40px 6%;
-        }
-
-        .footer-left {
-          width: 100%;
-        }
-
-        .footer-right {
-          width: 100%;
-          padding-top: 0;
-        }
-
-        .footer-links {
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .footer-links a {
-          font-size: 15px;
-        }
-
-        .footer-left h2 {
-          font-size: 24px;
-        }
-
-        .address {
-          font-size: 14px;
-        }
-
-        .footer-bottom {
-          font-size: 13px;
-        }
+        .footer { padding: 40px 6%; }
+        .footer-links { flex-direction: column; gap: 12px; }
+        .footer-links a { font-size: 15px; }
+        .footer-left h2 { font-size: 24px; }
+        .address { font-size: 14px; }
+        .footer-bottom { font-size: 13px; }
       }
 
-      /* special-section */
-      .special-section {
-        padding: 20px;
-        padding-bottom: 100px;
-        padding-top: 30px;
-        position: relative;
-        background: #fff;
-        justify-content: center;
-      }
-
-      .special-section h2 {
-        font-size: 60px;
-        font-weight: 700;
-        color: #000000;
-        margin-bottom: 30px;
-        line-height: normal;
-        padding-left: 50px;
-      }
-
-      .special-section .highlight {
-        color: #003399;
-      }
-
-      .special-content {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .special-content .text {
-        max-width: 55%;
-        font-size: 18px;
-        line-height: 1.6;
-        color: #003399;
-      }
-
-      .special-content .text p {
-        margin-bottom: 18px;
-        font-size: 28px;
-        color: #000000;
-        padding-left: 50px;
-      }
-
-      .special-content .text li {
-        font-size: 28px;
-        color: #4f4f4f;
-        padding-bottom: 30px;
-      }
-
-      .second-section-text {
-        margin-bottom: 18px;
-        font-size: 28px !important;
-        color: #000000;
-        padding-left: 0px !important;
-      }
-
-      .second-section-h2 {
-        font-size: 51px !important;
-        font-weight: 600 !important;
-        color: #bf0a30 !important;
-        margin-bottom: 30px;
-        line-height: normal;
-        padding-left: 0px !important;
-      }
-
-      .special-content strong {
-        color: #003399;
-      }
-
-      .image-right {
-        max-width: 45%;
-      }
-
-      .image-right img {
-        width: 100%;
-        height: auto;
-      }
-
-      .section3img {
-        width: 100%;
-        height: 510px !important;
-      }
-
-      .image-left {
-        position: absolute;
-        bottom: 20px;
-        left: 0px;
-        width: 220px;
-        max-width: 35%;
-      }
-
-      /* Mobile */
-      @media (max-width: 768px) {
-        .special-section {
-          padding: 40px 20px;
-        }
-
-        .special-content {
-          flex-direction: column !important;
-          text-align: center;
-        }
-
-        .special-content .text,
-        .image-right {
-          max-width: 100% !important;
-        }
-
-        .special-section h2,
-        .second-section-h2 {
-          font-size: 32px !important;
-          padding-left: 0 !important;
-          text-align: center;
-        }
-
-        .special-content .text p,
-        .second-section-text {
-          padding-left: 0 !important;
-          font-size: 18px !important;
-          text-align: center;
-        }
-
-        .special-content .text li {
-          font-size: 18px;
-          line-height: 28px;
-        }
-
-        .image-right img {
-          width: 100%;
-          max-width: 320px;
-          margin: 20px auto;
-          display: block;
-          height: auto !important;
-        }
-
-        .image-left {
-          position: static;
-          width: 150px;
-          margin: 20px auto 0;
-        }
-      }
-
-      /* header */
-      .navbar {
-        padding: 20px 40px;
-        background: #fff;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-      }
-
-      .nav-left,
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .logo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-      }
-
-      .brand {
-        font-size: 22px;
-        font-weight: 700;
-        color: #003399;
-      }
-
-      nav a {
-        font-size: 18px;
-        font-weight: 600;
-        color: #003399;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-
-      nav a:hover {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-        .header {
-          flex-direction: column;
-          align-items: center;
-          padding: 15px;
-          gap: 10px;
-        }
-
-        .nav-left img,
-        .nav-right img {
-          width: 40px;
-          height: 40px;
-        }
-
-        .nav-right nav {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          text-align: center;
-        }
-
-        .nav-right nav a {
-          padding: 8px 0;
-          width: 100%;
-          border-bottom: 1px solid #ddd;
-        }
-
-        .no-bottom-line nav a {
-          border-bottom: 0px !important;
-        }
-
-        .nav-right nav a:last-child {
-          border-bottom: none;
-        }
-      }
-
-      ::-webkit-input-placeholder {
-        color: #fff;
-      }
-      :-moz-placeholder {
-        color: #fff;
-        opacity: 1;
-      }
-      ::-moz-placeholder {
-        color: #fff;
-        opacity: 1;
-      }
-      :-ms-input-placeholder {
-        color: #fff;
-      }
-      ::-ms-input-placeholder {
-        color: #fff;
-      }
-      ::placeholder {
-        color: #fff;
-      }
+      ::placeholder { color: #fff; }
     </style>
   </head>
 
   <body>
-
     <header class="navbar">
       <a href="./index.html" class="nav-left" style="text-decoration: none">
         <img src="src/images/logo.png" alt="Logo" class="logo" />
         <span class="brand">SUPERGRAM</span>
       </a>
-
       <div class="nav-right">
         <nav>
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#feature">Feature</a>
         </nav>
-        <img src="src/images/logo.png" alt="Logo Right" class="logo" />
       </div>
     </header>
 
     <section id="home" class="special-section">
-      <div class="special-section-div">
-        <div class="special-content">
-          <div class="text">
-            <h2>Make Every<br />Second Count.</h2>
-            <p>
-              Supergram is the new home for short-form videos where you can
-              express, engage seamlessly.
-            </p>
-          </div>
-
-          <div class="image-right">
-            <img src="src/images/shopping-girls.png" alt="Shopping girls" />
-          </div>
+      <div class="special-content">
+        <div class="text">
+          <h2>Make Every<br />Second Count.</h2>
+          <p>Supergram is the new home for short-form videos where you can express, engage seamlessly.</p>
+        </div>
+        <div class="image-right">
+          <img src="src/images/shopping-girls.png" alt="Two girls shopping and using mobile phones" />
         </div>
       </div>
     </section>
 
     <section id="about" class="special-section">
-      <div class="special-section-div">
-        <div class="special-content">
-          <div class="image-right">
-            <img src="src/images/mobile.png" alt="Shopping girls" />
-          </div>
-          <div class="text">
-            <h2 class="second-section-h2">Create your day</h2>
-            <p class="second-section-text">
-              Our mission is to capture and present the world’s creativity,
-              knowledge, and moments that matter-directly from your mobile
-              phone.<br /><br />
-              At Supergram, everyone can become a creator. Whether you’re
-              telling stories, showcasing talent, or sharing what inspires
-              you-Supergram is where creativity comes alive.
-            </p>
-          </div>
+      <div class="special-content">
+        <div class="image-right">
+          <img src="src/images/mobile.png" alt="Mobile app illustration" />
+        </div>
+        <div class="text">
+          <h2 class="second-section-h2">Create your day</h2>
+          <p class="second-section-text">
+            Our mission is to capture and present the world’s creativity, knowledge, and moments that matter — directly from your mobile phone.<br /><br />
+            At Supergram, everyone can become a creator. Whether you’re telling stories, showcasing talent, or sharing what inspires you — Supergram is where creativity comes alive.
+          </p>
         </div>
       </div>
     </section>
 
     <section id="feature" class="special-section" style="padding-bottom: 0px !important">
-      <div class="special-section-div">
-        <div class="special-content">
-          <h2 class="second-section-h2">Explore Our unique features</h2>
-          <p class="second-section-text" style="margin: 0px !important; width: 50%; text-align: center; line-height: 40px;">
-            Create, connect, and build your presence through short-form videos.
-          </p>
-          <div class="text">
-            <ul>
-              <li><b>AI-powered</b> feed that surfaces content tailored to your passions.</li>
-              <li>Get creative with <b>lip-sync, duet, and react</b> — the most fun ways to express yourself on Supergram.</li>
-              <li>Join trending <b>#HashtagChallenges</b> and showcase your creativity to the world.</li>
-            </ul>
-          </div>
-
-          <div class="image-right">
-            <img src="src/images/mobile-girl.png" alt="Shopping girls" class="section3img" />
-          </div>
+      <div class="special-content">
+        <h2 class="second-section-h2">Explore Our unique features</h2>
+        <p class="second-section-text" style="margin: 0px !important; width: 50%; text-align: center; line-height: 40px;">
+          Create, connect, and build your presence through short-form videos.
+        </p>
+        <div class="text">
+          <ul>
+            <li><b>AI-powered</b> feed that surfaces content tailored to your passions.</li>
+            <li>Get creative with <b>lip-sync, duet, and react</b> — the most fun ways to express yourself on Supergram.</li>
+            <li>Join trending <b>#HashtagChallenges</b> and showcase your creativity to the world.</li>
+          </ul>
+        </div>
+        <div class="image-right">
+          <img src="src/images/mobile-girl.png" alt="Girl using mobile app" />
         </div>
       </div>
     </section>
@@ -649,10 +350,8 @@
       </div>
 
       <div class="footer-bottom">
-        © <script>document.write(/\d{4}/.exec(Date())[0]);</script>
-        Supergram Tech Private Limited — All rights reserved
+        © <script>document.write(/\d{4}/.exec(Date())[0]);</script> Supergram Tech Private Limited — All rights reserved
       </div>
     </footer>
-
   </body>
 </html>
