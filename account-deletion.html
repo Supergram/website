@@ -5,36 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supergram - Account Deletion</title>
     <style>
+        :root {
+            --bg: #050505;
+            --surface: #121214;
+            --line: rgba(255, 255, 255, 0.1);
+            --text: #f7f7f8;
+            --muted: #b8bac2;
+            --red: #e50914;
+        }
+
+        html {
+            background: var(--bg);
+        }
+
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
             line-height: 1.6;
-            color: #333;
+            color: var(--text);
+            background:
+                linear-gradient(180deg, rgba(229, 9, 20, 0.1), rgba(5, 5, 5, 0) 260px),
+                var(--bg);
         }
         h1 {
             font-size: 28px;
             margin-bottom: 20px;
+            color: #ffffff;
         }
         h2 {
             font-size: 22px;
             margin-top: 30px;
+            color: #ffffff;
+        }
+        strong {
+            color: #ffffff;
         }
         p {
             font-size: 16px;
+            color: var(--muted);
+        }
+        li {
+            color: var(--muted);
+        }
+        a {
+            color: #ff4b55;
         }
         .contact {
             margin-top: 20px;
             padding: 15px;
-            background: #f7f7f7;
-            border-left: 4px solid #007aff;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--red);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
         }
     </style>
 </head>
 <body>
 
-    <h1>Supergram – Account & Data Deletion</h1>
+    <h1>Supergram – Account &amp; Data Deletion</h1>
 
     <p>
         You can delete your Supergram account and all associated personal data directly from within the app. 
