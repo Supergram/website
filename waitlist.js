@@ -8,7 +8,7 @@ const statusEl = document.getElementById('waitlist-status');
 function setStatus(msg, type = 'info') {
   if (!statusEl) return;
   statusEl.textContent = msg;
-  statusEl.style.color = type === 'error' ? '#c91d2d' : '#0a3a82';
+  statusEl.style.color = type === 'error' ? '#ff4b55' : '#f7f7f8';
 }
 
 function isValidEmail(email) {
