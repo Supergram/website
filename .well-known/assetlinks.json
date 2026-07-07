@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.supergram",
+      "sha256_cert_fingerprints": [
+        "8D:6D:17:FB:91:07:70:17:45:5A:E8:A6:39:5C:82:03:9B:F8:4A:DC:ED:9A:FB:1C:A2:43:EF:25:F6:30:E5:E0"
+      ]
+    }
+  }
+]
