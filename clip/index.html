@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open profile on Himmin</title>
-    <meta name="description" content="Open this Himmin profile in the app." />
+    <title>Open clip on Himmin</title>
+    <meta name="description" content="Open this Himmin clip in the app." />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="canonical" href="https://www.himmin.com/profile" />
+    <link rel="canonical" href="https://www.himmin.com/clip" />
 
-    <meta property="og:title" content="Open this Himmin profile" />
-    <meta property="og:description" content="Continue to this profile in the Himmin app." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.himmin.com/profile" />
+    <meta property="og:title" content="Open this Himmin clip" />
+    <meta property="og:description" content="Continue to this clip in the Himmin app." />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:url" content="https://www.himmin.com/clip" />
     <meta property="og:image" content="https://www.himmin.com/src/images/new_logo.jpeg" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="1280" />
     <meta property="og:site_name" content="Himmin" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Open this Himmin profile" />
-    <meta name="twitter:description" content="Continue to this profile in the Himmin app." />
+    <meta name="twitter:title" content="Open this Himmin clip" />
+    <meta name="twitter:description" content="Continue to this clip in the Himmin app." />
     <meta name="twitter:image" content="https://www.himmin.com/src/images/new_logo.jpeg" />
 
     <style>
@@ -42,7 +42,6 @@
         --muted-strong: #d8d9de;
         --red: #bf0a30;
         --red-dark: #930722;
-        --red-soft: rgba(191, 10, 48, 0.16);
       }
 
       html {
@@ -184,7 +183,7 @@
         line-height: 1.6;
       }
 
-      .profile-panel {
+      .clip-panel {
         border: 1px solid var(--line);
         border-radius: 8px;
         background:
@@ -194,8 +193,8 @@
         box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
       }
 
-      .profile-media {
-        aspect-ratio: 1;
+      .clip-media {
+        aspect-ratio: 9 / 16;
         border-radius: 8px;
         display: grid;
         place-items: center;
@@ -205,14 +204,14 @@
         border: 1px solid rgba(255, 255, 255, 0.08);
       }
 
-      .profile-media img {
+      .clip-media img {
         width: min(46%, 150px);
         height: auto;
         display: block;
         border-radius: 28px;
       }
 
-      .profile-label {
+      .clip-label {
         margin: 20px 0 0;
         color: var(--muted);
         font-size: 0.9rem;
@@ -221,7 +220,7 @@
         text-transform: uppercase;
       }
 
-      .profile-value {
+      .clip-value {
         margin: 6px 0 0;
         color: var(--text);
         font-size: 1.28rem;
@@ -245,7 +244,7 @@
           font-size: 1rem;
         }
 
-        .profile-panel {
+        .clip-panel {
           order: -1;
           max-width: 360px;
         }
@@ -278,24 +277,24 @@
 
       <section class="content" aria-labelledby="page-title">
         <div class="copy">
-          <p class="eyebrow">Profile link</p>
+          <p class="eyebrow">Clip link</p>
           <h1 id="page-title">Opening Himmin</h1>
-          <p class="summary" id="profile-summary">Continue to this profile in the Himmin app.</p>
+          <p class="summary" id="clip-summary">Continue to this clip in the Himmin app.</p>
 
           <div class="actions">
             <a class="button button-primary" id="open-app" href="https://play.google.com/store/apps/details?id=com.supergram&amp;hl=en_IN">Open in Himmin</a>
             <a class="button button-secondary" id="install-app" href="https://play.google.com/store/apps/details?id=com.supergram&amp;hl=en_IN" target="_blank" rel="noopener noreferrer">Get the app</a>
           </div>
 
-          <p class="status" id="open-status">If Himmin is installed, this profile link can open directly in the app.</p>
+          <p class="status" id="open-status">If Himmin is installed, this clip link can open directly in the app.</p>
         </div>
 
-        <aside class="profile-panel" aria-label="Shared Himmin profile">
-          <div class="profile-media">
+        <aside class="clip-panel" aria-label="Shared Himmin clip">
+          <div class="clip-media">
             <img src="/src/images/logo.png" alt="Himmin" />
           </div>
-          <p class="profile-label">Shared profile</p>
-          <p class="profile-value" id="profile-value">Himmin</p>
+          <p class="clip-label">Shared clip</p>
+          <p class="clip-value" id="clip-value">Himmin</p>
         </aside>
       </section>
     </main>
@@ -305,16 +304,18 @@
         const packageName = 'com.supergram';
         const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.supergram&hl=en_IN';
         const params = new URLSearchParams(window.location.search);
-        const rawProfile = (params.get('u') || '').trim().slice(0, 160);
-        const hasProfile = rawProfile.length > 0;
-        const encodedProfile = encodeURIComponent(rawProfile);
-        const pathAndQuery = hasProfile ? `otherUser?u=${encodedProfile}` : 'otherUser';
+        const rawClipId = (params.get('c') || '').trim().slice(0, 160);
+        const hasClip = rawClipId.length > 0;
+        const encodedClipId = encodeURIComponent(rawClipId);
+        const pathAndQuery = hasClip
+          ? `reels?clipId=${encodedClipId}&fetchClips=true&isFullScreen=true`
+          : 'reels';
         const intentUrl = `intent://${pathAndQuery}#Intent;scheme=supergram;package=${packageName};S.browser_fallback_url=${encodeURIComponent(playStoreUrl)};end`;
         const isAndroid = /Android/i.test(navigator.userAgent);
 
         const title = document.getElementById('page-title');
-        const summary = document.getElementById('profile-summary');
-        const profileValue = document.getElementById('profile-value');
+        const summary = document.getElementById('clip-summary');
+        const clipValue = document.getElementById('clip-value');
         const openApp = document.getElementById('open-app');
         const installApp = document.getElementById('install-app');
         const status = document.getElementById('open-status');
@@ -322,12 +323,11 @@
         openApp.href = isAndroid ? intentUrl : playStoreUrl;
         installApp.href = playStoreUrl;
 
-        if (hasProfile) {
-          const displayName = rawProfile.startsWith('@') ? rawProfile : rawProfile;
-          document.title = `${displayName} on Himmin`;
-          title.textContent = 'Open this profile on Himmin';
-          summary.textContent = `Continue to ${displayName} in the Himmin app.`;
-          profileValue.textContent = displayName;
+        if (hasClip) {
+          document.title = 'Watch this clip on Himmin';
+          title.textContent = 'Open this clip on Himmin';
+          summary.textContent = 'Continue to this clip in the Himmin app.';
+          clipValue.textContent = rawClipId;
           status.textContent = isAndroid
             ? 'Opening the app now. Use the button if the browser stays here.'
             : 'Open this link on Android to continue in the Himmin app.';
